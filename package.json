@@ -1,6 +1,6 @@
 {
-  "name": "@wnz99/ta-api-node",
-  "version": "0.1.0",
+  "name": "ta-api-node",
+  "version": "0.0.9",
   "description": "",
   "main": "dist/ta.js",
   "standard": {
