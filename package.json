@@ -17,7 +17,8 @@
     "build:web:run": "browserify --debug ./src/ta.js --standalone TA | browser-run --port 2222",
     "test": "jest",
     "test:watch": "jest --watch",
-    "test:coverage": "jest --coverage --colors"
+    "test:coverage": "jest --coverage --colors",
+    "release": "np"
   },
   "author": "David Fava <david@tokenanalyst.io>",
   "license": "ISC",
