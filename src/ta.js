@@ -1,8 +1,8 @@
 const defaultConfig = require('./config');
-const bind = require('./lib/bind_api');
+const bindApi = require('./lib/bindApi');
 
 module.exports = (userConfig = {}) => {
-  const ta = bind(userConfig);
+  const ta = bindApi(userConfig);
 
   if (userConfig.relativeUrl) {
     defaultConfig.apiUrl = '/api';

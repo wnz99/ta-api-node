@@ -1,7 +1,7 @@
 const axios = require('axios');
 const makeApiUrl = require('../lib/makeApiUrl');
 
-module.exports = endpointCallFn => async (taInstance, params) => {
+module.exports = endpointName => async (taInstance, params) => {
   const {
     config: { apiUrl, apiKey }
   } = taInstance;
@@ -13,12 +13,14 @@ module.exports = endpointCallFn => async (taInstance, params) => {
         key: apiKey
       };
 
-  const apiCall = makeApiUrl(endpointCallFn(params), apiUrl, apiCallArgs);
+  const apiCall = makeApiUrl(endpointName, apiUrl, apiCallArgs);
 
-  let response;
+  let res;
+
+  console.log(apiCall);
 
   try {
-    response = await axios.get(apiCall);
+    res = await axios.get(apiCall);
   } catch (err) {
     if (err.response) {
       const {
@@ -46,5 +48,5 @@ module.exports = endpointCallFn => async (taInstance, params) => {
     };
   }
 
-  return response;
+  return res;
 };
