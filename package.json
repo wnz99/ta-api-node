@@ -2,6 +2,11 @@
   "name": "ta-api-node",
   "version": "0.1.2",
   "description": "",
+  "homepage": "https://github.com/wnz99/ta-api-node",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wnz99/ta-api-node.git"
+  },
   "main": "dist/ta.js",
   "standard": {
     "ignore": [
