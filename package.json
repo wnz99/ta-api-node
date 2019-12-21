@@ -1,6 +1,6 @@
 {
   "name": "ta-api-node",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "",
   "main": "dist/ta.js",
   "standard": {
