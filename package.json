@@ -18,7 +18,7 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage --colors",
-    "release": "np"
+    "release": "git fetch && np"
   },
   "author": "David Fava <david@tokenanalyst.io>",
   "license": "ISC",
