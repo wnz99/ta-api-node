@@ -1,27 +1,28 @@
 module.exports = {
   ENDPOINTS: {
     private: {
-      token_volume_window_historical: () =>
-        'token_volume_window_historical/last',
-      token_count_window_historical: () => 'token_count_window_historical/last',
-      exchange_flow_historical: () => 'exchange_flow_historical/last',
-      exchange_flow_window_historical: () =>
-        'exchange_flow_window_historical/last',
-      erc20_exchanges_flow_window_historical: () =>
-        'erc20_exchanges_flow_window_historical/last',
-      token_price_usd_window_historical: () =>
-        'token_price_usd_window_historical/last'
-    },
-    public: {
-      exchange_flows_all_tokens: () => 'last?job=exchange_flows_all_tokens_v5&',
-      latest_price: ({ token }) => `last?job=${token}_latest_price_v5&`,
-      exchange_flows_all_tokens_30_day: () => 'exchange_flows_all_tokens_30day',
-      all_exchange_flows_all_tokens: () =>
-        'last?job=all_exchange_flows_all_tokens_v5&',
-      miner_hashrate_30day: () => ({ token }) =>
-        `last?job=${token}_miner_hashrate_30day_v5&`,
-      miner_rewards_30day: () => ({ token }) =>
-        `last?job=${token}_miner_rewards_30day_v5&`
+      entity_to_entity_flow_window_historical: {},
+      exchange_balance_window_historical: {},
+      exchange_balancediff_window_historical: {},
+      exchange_flow_top10_window_historical: {},
+      exchange_flow_window_historical: {},
+      exchange_flow_window_static: {},
+      miner_flow_window_historical: {},
+      token_active_address_window_historical: {},
+      token_address_balance_group_window_historical: {},
+      token_count_window_historical: {},
+      token_fees_window_historical: {},
+      token_miner_hashrate_window_historical: {},
+      token_miner_rewards_window_historical: {},
+      token_mint_burn_window_historical: {},
+      token_new_address_window_historical: {},
+      token_nvt_window_historical: {},
+      token_price_usd_window_historical: {},
+      token_sopr_window_historical: {},
+      token_supply_window_historical: {},
+      token_utxo_age_window_historical: {},
+      token_utxo_metric_window_historical: {},
+      token_volume_window_historical: {}
     }
   }
 };

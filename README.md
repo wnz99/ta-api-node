@@ -1,8 +1,9 @@
 # TokenAnalyst API client for Node.JS
 
-An un-official Node.JS client for TokenAnalyst API: https://docs.tokenanalyst.io/#/api
+An un-official Node.JS client for TokenAnalyst API.
 
-Please note that only a few endpoint are supported so far.
+For a full list of supported endpoints and parameters please refer to the official TokenAnalyst API documentation at https://docs.tokenanalyst.io/#/api
+
 
 ## Installation
 
@@ -39,10 +40,10 @@ const ta = TA(conf)
 
 const params = {
   format: 'json',
-  token: 'BTC',
+  token: 'btc',
   exchange: 'binance',
   window: '1d',
-  directrion: 'inflow',
+  direction: 'inflow',
   from_date: '2019-07-16',
   to_date: '2019-10-06',
 }
@@ -56,5 +57,7 @@ if (!response.status === 200) {
   // Do something cool with data :)
 }
 ```
+
+Please also check `/examples` directory.
 
 Please open an issue for additional help or any other queries.
