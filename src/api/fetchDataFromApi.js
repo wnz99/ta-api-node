@@ -17,8 +17,6 @@ module.exports = endpointName => async (taInstance, params) => {
 
   let res;
 
-  console.log(apiCall);
-
   try {
     res = await axios.get(apiCall);
   } catch (err) {
