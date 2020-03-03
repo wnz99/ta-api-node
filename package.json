@@ -31,6 +31,17 @@
     "axios": "^0.19.0",
     "lodash": "^4.17.15"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "git-branch-is -r \"^((?!master).)*$\" && lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "pretty-quick --staged"
+    ]
+  },
   "devDependencies": {
     "@babel/core": "^7.6.0",
     "@babel/polyfill": "^7.4.4",
@@ -47,9 +58,12 @@
     "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-react": "^7.16.0",
     "eslint-plugin-react-hooks": "^1.7.0",
+    "git-branch-is": "^3.1.0",
     "hash-filename": "^1.0.4",
+    "husky": "^4.2.3",
     "jest": "^24.9.0",
     "jest-extended": "^0.11.2",
+    "lint-staged": "^10.0.8",
     "node-minify": "^3.6.0",
     "prettier": "1.18.2",
     "prettier-eslint": "^9.0.0"
