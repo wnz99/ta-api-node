@@ -1,5 +1,5 @@
 /* eslint-disable no-console */
-const TA = require('../src/ta');
+const TA = require('../dist/ta');
 
 const getFlow = async () => {
   const conf = {
