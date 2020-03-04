@@ -14,12 +14,12 @@ const RAW_ENDPOINTS = [
 ];
 const expectedEndpoint = {
   token_utxo_metric_window_historical: {
-    name: 'token_utxo_metric_window_historical',
+    name: 'token_utxo_metric_window_historical/last',
     description: '',
     tier: 2
   },
   token_volume_window_historical: {
-    name: 'token_volume_window_historical',
+    name: 'token_volume_window_historical/last',
     description: '',
     tier: 0
   }

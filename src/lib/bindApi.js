@@ -19,8 +19,10 @@ module.exports = (userConfig = {}) => {
 
   // Private endpoints
 
-  Object.keys(ENDPOINTS.private).forEach(endpointName => {
-    ta[camelCase(endpointName)] = compose(fetchDataFromApi(endpointName));
+  Object.entries(ENDPOINTS.private).forEach(([key, value]) => {
+    const { name } = value;
+
+    ta[camelCase(key)] = compose(fetchDataFromApi(name));
   });
 
   // Custom endpoints

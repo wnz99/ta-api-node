@@ -4,7 +4,8 @@ module.exports = endpoints => {
     return {
       ...acc,
       [name]: {
-        ...endpoint
+        ...endpoint,
+        name: `${name}/last`
       }
     };
   }, {});
