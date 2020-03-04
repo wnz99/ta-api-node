@@ -1,3 +1,5 @@
+![Node.js CI](https://github.com/wnz99/ta-api-node/workflows/Node.js%20CI/badge.svg)
+
 # TokenAnalyst API client for Node.JS
 
 An un-official Node.JS client for TokenAnalyst API.
