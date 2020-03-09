@@ -4,7 +4,10 @@ module.exports = params => {
   }
 
   const query = Object.keys(params).reduce(
-    (acc, param) => (params[param] ? `${acc}${param}=${params[param]}&` : acc),
+    (acc, param) =>
+      params[param]
+        ? `${acc}${param}=${encodeURIComponent(params[param])}&`
+        : acc,
     ''
   );
   return `${query.slice(0, -1)}`;
