@@ -21,8 +21,10 @@ describe('fetchDataFromApi function', () => {
     const taInstance = {
       config: {
         apiUrl,
-        apiKey
-      }
+        apiKey,
+        debug: true
+      },
+      logger: { info: jest.fn() }
     };
     const params = {
       pOne: 'p_one',
@@ -37,6 +39,7 @@ describe('fetchDataFromApi function', () => {
       expectedParams
     );
     expect(result).toBe('success');
+    expect(taInstance.logger.info).toHaveBeenCalled();
   });
 
   it(`should should make a call to TA API with no key`, async () => {
