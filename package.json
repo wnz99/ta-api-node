@@ -25,7 +25,8 @@
   "license": "ISC",
   "dependencies": {
     "axios": "^0.19.2",
-    "lodash": "^4.17.15"
+    "lodash": "^4.17.15",
+    "log4js": "^6.1.2"
   },
   "husky": {
     "hooks": {

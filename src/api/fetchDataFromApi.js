@@ -3,7 +3,8 @@ const makeApiUrl = require('../lib/makeApiUrl');
 
 module.exports = endpointName => async (taInstance, params) => {
   const {
-    config: { apiUrl, apiKey }
+    config: { apiUrl, apiKey, debug },
+    logger
   } = taInstance;
 
   const apiCallArgs = !apiKey
@@ -14,6 +15,10 @@ module.exports = endpointName => async (taInstance, params) => {
       };
 
   const apiCall = makeApiUrl(endpointName, apiUrl, apiCallArgs);
+
+  if (debug) {
+    logger.info(apiCall);
+  }
 
   let res;
 

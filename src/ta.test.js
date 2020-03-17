@@ -13,7 +13,7 @@ describe('ta function', () => {
     const userConfig = {};
     const ta = TA();
     expect(bindApi).toHaveBeenCalledWith(userConfig);
-    expect(ta).toContainAllKeys(['config', 'isBrowser']);
+    expect(ta).toContainAllKeys(['config', 'isBrowser', 'logger']);
     expect(ta.config).toEqual(defaultConfig);
     expect(ta.isBrowser).toBe(true);
   });
@@ -22,7 +22,7 @@ describe('ta function', () => {
     const userConfig = { relativeUrl: true };
     const ta = TA(userConfig);
     expect(bindApi).toHaveBeenCalledWith(userConfig);
-    expect(ta).toContainAllKeys(['config', 'isBrowser']);
+    expect(ta).toContainAllKeys(['config', 'isBrowser', 'logger']);
     const customConfig = { ...defaultConfig, apiUrl: '/api' };
     expect(ta.config).toEqual({ ...customConfig, ...userConfig });
     expect(ta.isBrowser).toBe(true);
