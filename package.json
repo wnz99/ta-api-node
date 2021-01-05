@@ -24,7 +24,7 @@
   "author": "David Fava <david@tokenanalyst.io>",
   "license": "ISC",
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "lodash": "^4.17.15",
     "log4js": "^6.1.2"
   },
